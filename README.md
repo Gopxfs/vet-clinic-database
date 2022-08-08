@@ -1,5 +1,5 @@
 # Vet Clinic Database
-In this project, I'm learning how to build a relational database based on a vet clinic.
+In this project, I'm learning how to build a relational database for a vet clinic.
 
 ## Built With:
 - PostgreSQL
