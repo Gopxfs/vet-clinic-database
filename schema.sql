@@ -6,6 +6,7 @@ name text,
 date_of_birth date,
 escape_attempts int,
 neutered bit,
-weight_kg decimal
+weight_kg decimal,
+species text
 );
 
