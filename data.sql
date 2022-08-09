@@ -39,7 +39,7 @@ INSERT INTO animals VALUES (
 0,
 '0',
 -11,
-'Digimon'
+''
 );
 
 INSERT INTO animals VALUES (
@@ -49,7 +49,7 @@ INSERT INTO animals VALUES (
 2,
 '1',
 -5.7,
-'Digimon'
+''
 );
 
 INSERT INTO animals VALUES (
@@ -59,7 +59,7 @@ INSERT INTO animals VALUES (
 3,
 '0',
 -12.13,
-'Pokemon'
+''
 );
 
 INSERT INTO animals VALUES (
@@ -69,7 +69,7 @@ INSERT INTO animals VALUES (
 1,
 '1',
 -45,
-'Digimon'
+''
 );
 
 INSERT INTO animals VALUES (
@@ -101,3 +101,31 @@ INSERT INTO animals VALUES (
 22,
 ''
 );
+
+BEGIN;
+UPDATE animals
+SET species = 'unspecified';
+SELECT species from animals;
+ROLLBACK;
+SELECT species from animals;
+
+BEGIN;
+UPDATE animals SET species = 'Digimon' WHERE name LIKE '%mon%'; 
+UPDATE animals SET species = 'Pokemon' WHERE name NOT LIKE '%mon%'; 
+SELECT species from animals;
+COMMIT;
+SELECT species from animals;
+
+BEGIN;
+DELETE FROM animals;
+SELECT * FROM ANIMALS;
+ROLLBACK;
+SELECT * FROM ANIMALS;
+
+BEGIN;
+DELETE FROM animals WHERE date_of_birth >= '2022-01-01' ;
+SAVEPOINT rip_ditto;
+UPDATE animals SET weight_kg = weight_kg * -1; 
+ROLLBACK TO rip_ditto;
+UPDATE animals SET weight_kg = weight_kg * -1 WHERE weight_kg < 0; 
+COMMIT;
