@@ -27,3 +27,15 @@ name text,
 age int,
 date_of_graduation date
 );
+
+CREATE TABLE specialization (
+id int,
+pokemon boolean,
+digimon boolean
+);
+
+CREATE TABLE visits (
+animal_id int,
+vet_id int,
+date_of_visit date
+);
