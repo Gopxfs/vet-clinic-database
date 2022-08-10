@@ -131,3 +131,5 @@ update animals set owners_id = 4 where name = 'Charmander' or name = 'Squirtle' 
 update animals set owners_id = 5 where name = 'Angemon' or name = 'Boarmon';
 
 insert into vets (name, age, date_of_graduation) values ('William Tatcher', 45, 'Apr 4, 1981'), ('Maisy Smith', 26, 'Jan 17, 2019'), ('Stephanie Mendez', 64, 'May 4, 1981'), ('Jack Harkness', 38, 'Jun 8, 2008');
+insert into specialization values (1, true, false), (2, false, false), (3, true, true) (4, false, true);
+
