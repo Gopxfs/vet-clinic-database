@@ -23,4 +23,10 @@ select max(weight_kg) from animals where name like '%mon%';
 select min(weight_kg) from animals where name not like '%mon%';
 select max(weight_kg) from animals where name not like '%mon%';
 
+select animals.name from animals join owners on owners.id = 4 and animals.owners_id = 4;
+select animals.name from animals join species on species.id = animals.species_id where species.name = 'Pokemon';
+select owners.full_name, animals.name from owners left join animals on owners.id = animals.owners_id;
+select count(animals.species_id),species.name from animals join species on animals.species_id = species.id group by animals.species_id,species.name;
+select animals.name from animals join species on species.id = 2 and animals.species_id = 2 join owners on owners.full_name = 'Jennifer Orwell' and animals.owners_id = 2;
+select animals.name from animals join owners on owners.id = animals.owners_id where owners.full_name = 'Dean Winchester' and escape_attempts = 0;
 
