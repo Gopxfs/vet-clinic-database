@@ -24,4 +24,3 @@ select min(weight_kg) from animals where name not like '%mon%';
 select max(weight_kg) from animals where name not like '%mon%';
 
 
-
