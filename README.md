@@ -2,6 +2,7 @@
 In this project, I'm learning how to build a relational database for a vet clinic.
 
 ## Built With:
+- SQL
 - PostgreSQL
 
 ## Getting Started:
