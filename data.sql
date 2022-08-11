@@ -129,3 +129,36 @@ update animals set owners_id = 2 where name = 'Gabumon' or name = 'Pikachu';
 update animals set owners_id = 3 where name = 'Devimon' or name = 'Plantmon';
 update animals set owners_id = 4 where name = 'Charmander' or name = 'Squirtle' or name = 'Blossom';
 update animals set owners_id = 5 where name = 'Angemon' or name = 'Boarmon';
+
+insert into vets (name, age, date_of_graduation) values ('William Tatcher', 45, 'Apr 4, 1981'), ('Maisy Smith', 26, 'Jan 17, 2019'), ('Stephanie Mendez', 64, 'May 4, 1981'), ('Jack Harkness', 38, 'Jun 8, 2008');
+insert into specialization values (1, true, false), (2, false, false), (3, true, true) (4, false, true);
+
+insert into visits select animals.id, vets.id, 'May 24, 2020' from animals join vets on vets.name='William Tatcher' and animals.name='Agumon';
+insert into visits select animals.id, vets.id, 'Jul 22, 2020' from animals join vets on vets.name='Stephanie Mendez' and animals.name='Agumon';
+
+insert into visits select animals.id, vets.id, 'Feb 2, 2021' from animals join vets on vets.name='Jack Harkness' and animals.name='Gabumon';
+
+insert into visits select animals.id, vets.id, 'Jan 5, 2020' from animals join vets on vets.name='Maisy Smith' and animals.name='Pikachu';
+insert into visits select animals.id, vets.id, 'Mar 8, 2020' from animals join vets on vets.name='Maisy Smith' and animals.name='Pikachu';
+insert into visits select animals.id, vets.id, 'May 14, 2020' from animals join vets on vets.name='Maisy Smith' and animals.name='Pikachu';
+
+insert into visits select animals.id, vets.id, 'May 4, 2021' from animals join vets on vets.name='Stephanie Mendez' and animals.name='Devimon';
+
+insert into visits select animals.id, vets.id, 'Feb 24, 2021' from animals join vets on vets.name='Jack Harkness' and animals.name='Charmander';
+
+insert into visits select animals.id, vets.id, 'Dec 21, 2019' from animals join vets on vets.name='Maisy Smith' and animals.name='Plantmon';
+insert into visits select animals.id, vets.id, 'Aug 10, 2020' from animals join vets on vets.name='William Tatcher' and animals.name='Plantmon';
+insert into visits select animals.id, vets.id, 'Apr 7, 2021' from animals join vets on vets.name='Maisy Smith' and animals.name='Plantmon';
+
+insert into visits select animals.id, vets.id, 'Sep 29, 2019' from animals join vets on vets.name='Stephanie Mendez' and animals.name='Squirtle';
+
+insert into visits select animals.id, vets.id, 'Oct 3, 2020' from animals join vets on vets.name='Jack Harkness' and animals.name='Angemon';
+insert into visits select animals.id, vets.id, 'Nov 4, 2020' from animals join vets on vets.name='Jack Harkness' and animals.name='Angemon';
+
+insert into visits select animals.id, vets.id, 'Jan 24, 2019' from animals join vets on vets.name='Maisy Smith' and animals.name='Boarmon';
+insert into visits select animals.id, vets.id, 'May 15, 2019' from animals join vets on vets.name='Maisy Smith' and animals.name='Boarmon';
+insert into visits select animals.id, vets.id, 'Feb 27, 2020' from animals join vets on vets.name='Maisy Smith' and animals.name='Boarmon';
+insert into visits select animals.id, vets.id, 'Aug 3, 2020' from animals join vets on vets.name='Maisy Smith' and animals.name='Boarmon';
+
+insert into visits select animals.id, vets.id, 'May 24, 2020' from animals join vets on vets.name='Stephanie Mendez' and animals.name='Blossom';
+insert into visits select animals.id, vets.id, 'Jan 11, 2021' from animals join vets on vets.name='William Tatcher' and animals.name='Blossom';

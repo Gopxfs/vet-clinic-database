@@ -20,3 +20,22 @@ CREATE TABLE species (
 id INT PRIMARY KEY GENERATED ALWAYS AS IDENTITY NOT NULL,
 name text
 );
+
+CREATE TABLE vets (
+id int PRIMARY KEY GENERATED ALWAYS AS IDENTITY NOT NULL,
+name text,
+age int,
+date_of_graduation date
+);
+
+CREATE TABLE specialization (
+id int,
+pokemon boolean,
+digimon boolean
+);
+
+CREATE TABLE visits (
+animal_id int,
+vet_id int,
+date_of_visit date
+);
