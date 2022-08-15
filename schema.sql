@@ -41,4 +41,5 @@ date_of_visit date
 );
 
 create index animal_id_asc on visits(animal_id asc);
+create index vet_id_asc on visits(vet_id asc);
 
