@@ -49,4 +49,4 @@ alter table animals add constraint fk_onwers foreign key (owners_id) references 
 ALTER TABLE owners ADD COLUMN email VARCHAR(120);
 create index animal_id_asc on visits(animal_id asc);
 create index vet_id_asc on visits(vet_id asc);
-
+create index owner_email_asc on owners(email asc);
