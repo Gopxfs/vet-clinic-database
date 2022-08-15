@@ -39,3 +39,6 @@ animal_id int,
 vet_id int,
 date_of_visit date
 );
+
+create index animal_id_asc on visits(animal_id asc);
+
