@@ -112,12 +112,6 @@ ROLLBACK TO rip_ditto;
 UPDATE animals SET weight_kg = weight_kg * -1 WHERE weight_kg < 0; 
 COMMIT;
 
-alter table animals drop column species;
-alter table animals add column species_id int;
-alter table animals add constraint fk_species foreign key (species_id) references species(id);
-alter table animals add column owners_id int;
-alter table animals add constraint fk_onwers foreign key (owners_id) references owners(id);
-
 insert into owners (full_name, age) values ('Sam Smith', 34), ('Jennifer Orwell', 19), ('Bob',45), ('Melody Pond', 77), ('Dean Winchester', 14), ('Jodie Whittaker', 38);
 insert into species (name) values ('Pokemon'), ('Digimon');
 
@@ -163,7 +157,6 @@ insert into visits select animals.id, vets.id, 'Aug 3, 2020' from animals join v
 insert into visits select animals.id, vets.id, 'May 24, 2020' from animals join vets on vets.name='Stephanie Mendez' and animals.name='Blossom';
 insert into visits select animals.id, vets.id, 'Jan 11, 2021' from animals join vets on vets.name='William Tatcher' and animals.name='Blossom';
 
-ALTER TABLE owners ADD COLUMN email VARCHAR(120);
 INSERT INTO visits (animal_id, vet_id, date_of_visit) SELECT * FROM (SELECT id FROM animals) animal_ids, (SELECT id FROM vets) vets_ids, generate_series('1980-01-01'::timestamp, '2021-01-01', '4 hours') visit_timestamp;
 insert into owners (full_name, email) select 'Owner ' || generate_series(1,2500000), 'owner_' || generate_series(1,2500000) || '@mail.com';
 INSERT INTO visits (animal_id, vet_id, date_of_visit) SELECT * FROM (SELECT id FROM animals) animal_ids, (SELECT id FROM vets) vets_ids, generate_series('1980-01-01'::timestamp, '2021-01-01', '4 hours') visit_timestamp;
