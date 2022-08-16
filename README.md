@@ -1,8 +1,12 @@
 # Vet Clinic Database
-In this project, I'm learning how to build a relational database for a vet clinic.
+In this project, I'm learning how to build a database for a vet clinic using SQL, as well as making a schema diagram.
 
 ## Built With:
 - PostgreSQL
+- MySQL Workbench
+
+## Schema Diagram
+![image](https://user-images.githubusercontent.com/42799579/184934371-347d4464-6414-461c-8863-910e5ad52202.png)
 
 ## Getting Started:
 To access and change the code on your computer (using GIT):
