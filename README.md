@@ -2,8 +2,10 @@
 In this project, I'm learning how to build a database for a vet clinic using SQL.
 
 ## Built With:
-- SQL
 - PostgreSQL
+- MySQL Workbench
+
+## Schema Diagram
 
 ## Getting Started:
 To access and change the code on your computer (using GIT):
