@@ -6,6 +6,8 @@ In this project, I'm learning how to build a database for a vet clinic using SQL
 - MySQL Workbench
 
 ## Schema Diagram
+![image](https://user-images.githubusercontent.com/42799579/184933755-7f082302-2e7c-4f87-86e3-49ebf2a1374b.png)
+
 
 ## Getting Started:
 To access and change the code on your computer (using GIT):
