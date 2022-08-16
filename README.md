@@ -5,10 +5,6 @@ In this project, I'm learning how to build a database for a vet clinic using SQL
 - PostgreSQL
 - MySQL Workbench
 
-## Schema Diagram
-![image](https://user-images.githubusercontent.com/42799579/184933755-7f082302-2e7c-4f87-86e3-49ebf2a1374b.png)
-
-
 ## Getting Started:
 To access and change the code on your computer (using GIT):
 > Note: if you don't use git, you can download the ZIP of this repository by clicking on the "Code" button above the files list.
